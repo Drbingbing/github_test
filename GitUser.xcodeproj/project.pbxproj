@@ -15,7 +15,73 @@
 		44105D902C58F01F004D4A45 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105D8F2C58F01F004D4A45 /* NavigationController.swift */; };
 		44105D932C58F706004D4A45 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 44105D922C58F706004D4A45 /* ComposableArchitecture */; };
 		44105D962C58F74F004D4A45 /* BaseToolbox in Frameworks */ = {isa = PBXBuildFile; productRef = 44105D952C58F74F004D4A45 /* BaseToolbox */; };
+		44105DC72C590333004D4A45 /* GitUserEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105DC62C590333004D4A45 /* GitUserEngine.swift */; };
+		44105DCD2C59036D004D4A45 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105DCC2C59036D004D4A45 /* Search.swift */; };
+		44105DDB2C59060B004D4A45 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105DDA2C59060B004D4A45 /* Account.swift */; };
+		44105DE52C590A46004D4A45 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 44105DE42C590A46004D4A45 /* Alamofire */; };
+		44105DE82C590B5C004D4A45 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105DE72C590B5C004D4A45 /* Logging.swift */; };
+		44105DF42C590BEC004D4A45 /* GitUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105DE12C5909D3004D4A45 /* GitUserRequest.swift */; };
+		44105DF62C590BEC004D4A45 /* FunctionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105DDF2C590838004D4A45 /* FunctionDescription.swift */; };
+		44105DF72C590BF2004D4A45 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105DDD2C590729004D4A45 /* Network.swift */; };
+		44105DF92C590C0E004D4A45 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 44105DF82C590C0E004D4A45 /* Alamofire */; };
+		44105DFB2C590C70004D4A45 /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105DFA2C590C70004D4A45 /* ServerConfig.swift */; };
+		44105DFC2C59103F004D4A45 /* libGitAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44105DED2C590BE3004D4A45 /* libGitAPI.a */; };
+		44105E012C5914A9004D4A45 /* LogBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E002C5914A9004D4A45 /* LogBox.swift */; };
+		44105E112C591646004D4A45 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 44105E102C591646004D4A45 /* ComposableArchitecture */; };
+		44105E122C591646004D4A45 /* libGitUserCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44105DC42C590333004D4A45 /* libGitUserCore.a */; };
+		44105E162C5916D2004D4A45 /* SearchStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E152C5916D2004D4A45 /* SearchStore.swift */; };
+		44105E172C59186B004D4A45 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105DFE2C59137E004D4A45 /* Context.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		44105E032C591570004D4A45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 440D322B2C58EDB5002C9D42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44105DC32C590333004D4A45;
+			remoteInfo = GitUserCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		44105DB32C58FF95004D4A45 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44105DC22C590333004D4A45 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44105DEB2C590BE3004D4A45 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44105E072C591616004D4A45 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		440D32332C58EDB5002C9D42 /* GitUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +92,20 @@
 		440D32422C58EDB6002C9D42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		440D32442C58EDB6002C9D42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44105D8F2C58F01F004D4A45 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		44105DC42C590333004D4A45 /* libGitUserCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGitUserCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		44105DC62C590333004D4A45 /* GitUserEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUserEngine.swift; sourceTree = "<group>"; };
+		44105DCC2C59036D004D4A45 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		44105DDA2C59060B004D4A45 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		44105DDD2C590729004D4A45 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		44105DDF2C590838004D4A45 /* FunctionDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionDescription.swift; sourceTree = "<group>"; };
+		44105DE12C5909D3004D4A45 /* GitUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUserRequest.swift; sourceTree = "<group>"; };
+		44105DE72C590B5C004D4A45 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		44105DED2C590BE3004D4A45 /* libGitAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGitAPI.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		44105DFA2C590C70004D4A45 /* ServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfig.swift; sourceTree = "<group>"; };
+		44105DFE2C59137E004D4A45 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		44105E002C5914A9004D4A45 /* LogBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogBox.swift; sourceTree = "<group>"; };
+		44105E092C591616004D4A45 /* libGitLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGitLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		44105E152C5916D2004D4A45 /* SearchStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +118,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		44105DC12C590333004D4A45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44105DFC2C59103F004D4A45 /* libGitAPI.a in Frameworks */,
+				44105DE52C590A46004D4A45 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44105DEA2C590BE3004D4A45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44105DF92C590C0E004D4A45 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44105E062C591616004D4A45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44105E122C591646004D4A45 /* libGitUserCore.a in Frameworks */,
+				44105E112C591646004D4A45 /* ComposableArchitecture in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -45,7 +151,11 @@
 			isa = PBXGroup;
 			children = (
 				440D32352C58EDB5002C9D42 /* GitUser */,
+				44105DC52C590333004D4A45 /* GitUserCore */,
+				44105DEE2C590BE3004D4A45 /* GitAPI */,
+				44105E0A2C591616004D4A45 /* GitLibrary */,
 				440D32342C58EDB5002C9D42 /* Products */,
+				44105DBD2C590003004D4A45 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +163,9 @@
 			isa = PBXGroup;
 			children = (
 				440D32332C58EDB5002C9D42 /* GitUser.app */,
+				44105DC42C590333004D4A45 /* libGitUserCore.a */,
+				44105DED2C590BE3004D4A45 /* libGitAPI.a */,
+				44105E092C591616004D4A45 /* libGitLibrary.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,6 +200,85 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		44105DBD2C590003004D4A45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		44105DC52C590333004D4A45 /* GitUserCore */ = {
+			isa = PBXGroup;
+			children = (
+				44105DE62C590B4C004D4A45 /* Logging */,
+				44105DD92C590603004D4A45 /* Account */,
+				44105DCB2C59035F004D4A45 /* Search */,
+				44105DC62C590333004D4A45 /* GitUserEngine.swift */,
+			);
+			path = GitUserCore;
+			sourceTree = "<group>";
+		};
+		44105DCB2C59035F004D4A45 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				44105DCC2C59036D004D4A45 /* Search.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		44105DD92C590603004D4A45 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				44105DDA2C59060B004D4A45 /* Account.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		44105DE62C590B4C004D4A45 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				44105DE72C590B5C004D4A45 /* Logging.swift */,
+				44105E002C5914A9004D4A45 /* LogBox.swift */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
+		44105DEE2C590BE3004D4A45 /* GitAPI */ = {
+			isa = PBXGroup;
+			children = (
+				44105DDD2C590729004D4A45 /* Network.swift */,
+				44105DDF2C590838004D4A45 /* FunctionDescription.swift */,
+				44105DE12C5909D3004D4A45 /* GitUserRequest.swift */,
+				44105DFA2C590C70004D4A45 /* ServerConfig.swift */,
+			);
+			path = GitAPI;
+			sourceTree = "<group>";
+		};
+		44105DFD2C591377004D4A45 /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				44105DFE2C59137E004D4A45 /* Context.swift */,
+			);
+			path = Context;
+			sourceTree = "<group>";
+		};
+		44105E0A2C591616004D4A45 /* GitLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				44105E132C5916C1004D4A45 /* Stores */,
+				44105DFD2C591377004D4A45 /* Context */,
+			);
+			path = GitLibrary;
+			sourceTree = "<group>";
+		};
+		44105E132C5916C1004D4A45 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				44105E152C5916D2004D4A45 /* SearchStore.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -97,10 +289,12 @@
 				440D322F2C58EDB5002C9D42 /* Sources */,
 				440D32302C58EDB5002C9D42 /* Frameworks */,
 				440D32312C58EDB5002C9D42 /* Resources */,
+				44105DB32C58FF95004D4A45 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				44105E042C591570004D4A45 /* PBXTargetDependency */,
 			);
 			name = GitUser;
 			packageProductDependencies = (
@@ -110,6 +304,66 @@
 			productName = GitUser;
 			productReference = 440D32332C58EDB5002C9D42 /* GitUser.app */;
 			productType = "com.apple.product-type.application";
+		};
+		44105DC32C590333004D4A45 /* GitUserCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44105DC82C590333004D4A45 /* Build configuration list for PBXNativeTarget "GitUserCore" */;
+			buildPhases = (
+				44105DC02C590333004D4A45 /* Sources */,
+				44105DC12C590333004D4A45 /* Frameworks */,
+				44105DC22C590333004D4A45 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GitUserCore;
+			packageProductDependencies = (
+				44105DE42C590A46004D4A45 /* Alamofire */,
+			);
+			productName = GitUserCore;
+			productReference = 44105DC42C590333004D4A45 /* libGitUserCore.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		44105DEC2C590BE3004D4A45 /* GitAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44105DF12C590BE3004D4A45 /* Build configuration list for PBXNativeTarget "GitAPI" */;
+			buildPhases = (
+				44105DE92C590BE3004D4A45 /* Sources */,
+				44105DEA2C590BE3004D4A45 /* Frameworks */,
+				44105DEB2C590BE3004D4A45 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GitAPI;
+			packageProductDependencies = (
+				44105DF82C590C0E004D4A45 /* Alamofire */,
+			);
+			productName = GitAPI;
+			productReference = 44105DED2C590BE3004D4A45 /* libGitAPI.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		44105E082C591616004D4A45 /* GitLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44105E0D2C591616004D4A45 /* Build configuration list for PBXNativeTarget "GitLibrary" */;
+			buildPhases = (
+				44105E052C591616004D4A45 /* Sources */,
+				44105E062C591616004D4A45 /* Frameworks */,
+				44105E072C591616004D4A45 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GitLibrary;
+			packageProductDependencies = (
+				44105E102C591646004D4A45 /* ComposableArchitecture */,
+			);
+			productName = GitLibrary;
+			productReference = 44105E092C591616004D4A45 /* libGitLibrary.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -123,6 +377,16 @@
 				TargetAttributes = {
 					440D32322C58EDB5002C9D42 = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					44105DC32C590333004D4A45 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					44105DEC2C590BE3004D4A45 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					44105E082C591616004D4A45 = {
+						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -138,12 +402,16 @@
 			packageReferences = (
 				44105D912C58F706004D4A45 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				44105D942C58F74F004D4A45 /* XCRemoteSwiftPackageReference "BaseToolbox" */,
+				44105DE32C590A46004D4A45 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 440D32342C58EDB5002C9D42 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				440D32322C58EDB5002C9D42 /* GitUser */,
+				44105DC32C590333004D4A45 /* GitUserCore */,
+				44105DEC2C590BE3004D4A45 /* GitAPI */,
+				44105E082C591616004D4A45 /* GitLibrary */,
 			);
 		};
 /* End PBXProject section */
@@ -172,7 +440,47 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		44105DC02C590333004D4A45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44105E012C5914A9004D4A45 /* LogBox.swift in Sources */,
+				44105DC72C590333004D4A45 /* GitUserEngine.swift in Sources */,
+				44105DCD2C59036D004D4A45 /* Search.swift in Sources */,
+				44105DE82C590B5C004D4A45 /* Logging.swift in Sources */,
+				44105DDB2C59060B004D4A45 /* Account.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44105DE92C590BE3004D4A45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44105DF42C590BEC004D4A45 /* GitUserRequest.swift in Sources */,
+				44105DF62C590BEC004D4A45 /* FunctionDescription.swift in Sources */,
+				44105DFB2C590C70004D4A45 /* ServerConfig.swift in Sources */,
+				44105DF72C590BF2004D4A45 /* Network.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44105E052C591616004D4A45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44105E162C5916D2004D4A45 /* SearchStore.swift in Sources */,
+				44105E172C59186B004D4A45 /* Context.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44105E042C591570004D4A45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44105DC32C590333004D4A45 /* GitUserCore */;
+			targetProxy = 44105E032C591570004D4A45 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		440D32412C58EDB6002C9D42 /* LaunchScreen.storyboard */ = {
@@ -308,6 +616,7 @@
 		440D32482C58EDB6002C9D42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -335,6 +644,7 @@
 		440D32492C58EDB6002C9D42 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -354,6 +664,85 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.bingbing.GitUser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		44105DC92C590333004D4A45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		44105DCA2C590333004D4A45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		44105DF22C590BE3004D4A45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		44105DF32C590BE3004D4A45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		44105E0E2C591616004D4A45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		44105E0F2C591616004D4A45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -380,6 +769,33 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		44105DC82C590333004D4A45 /* Build configuration list for PBXNativeTarget "GitUserCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44105DC92C590333004D4A45 /* Debug */,
+				44105DCA2C590333004D4A45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44105DF12C590BE3004D4A45 /* Build configuration list for PBXNativeTarget "GitAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44105DF22C590BE3004D4A45 /* Debug */,
+				44105DF32C590BE3004D4A45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44105E0D2C591616004D4A45 /* Build configuration list for PBXNativeTarget "GitLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44105E0E2C591616004D4A45 /* Debug */,
+				44105E0F2C591616004D4A45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -399,6 +815,14 @@
 				minimumVersion = 0.6.0;
 			};
 		};
+		44105DE32C590A46004D4A45 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -411,6 +835,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 44105D942C58F74F004D4A45 /* XCRemoteSwiftPackageReference "BaseToolbox" */;
 			productName = BaseToolbox;
+		};
+		44105DE42C590A46004D4A45 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44105DE32C590A46004D4A45 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		44105DF82C590C0E004D4A45 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44105DE32C590A46004D4A45 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		44105E102C591646004D4A45 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44105D912C58F706004D4A45 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
