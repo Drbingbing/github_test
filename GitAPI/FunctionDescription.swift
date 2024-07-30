@@ -19,13 +19,13 @@ public final class FunctionDescription {
 }
 
 public final class DeserializeFunctionResponse<T> {
-    private let f: (Data?) -> T?
+    private let f: (Data) throws -> T
     
-    public init(_ f: @escaping (Data?) -> T?) {
+    public init(_ f: @escaping (Data) throws -> T) {
         self.f = f
     }
     
-    public func parse(_ data: Data?) -> T? {
-        return self.f(data)
+    public func parse(_ data: Data) throws -> T {
+        return try self.f(data)
     }
 }

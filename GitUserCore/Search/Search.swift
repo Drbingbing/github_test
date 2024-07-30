@@ -7,6 +7,7 @@
 
 import Foundation
 import GitAPI
+import GitModel
 
 extension GitUserEngine {
     
@@ -17,18 +18,13 @@ extension GitUserEngine {
             self.account = account
         }
         
-        public func searchUsers(query: String) async throws -> [String] {
+        public func searchUsers(query: String) async throws -> GitUserResult {
             return try await _internal_searchUsers(account: account, query: query)
         }
     }
 }
 
-func _internal_searchUsers(account: Account, query: String) async throws -> [String] {
+func _internal_searchUsers(account: Account, query: String) async throws -> GitUserResult {
     let result = try await account.network.request(data: Api.functions.search.searchUsers(query))
-    switch result {
-    case .success(let success):
-        return success ?? []
-    case .failure:
-        return []
-    }
+    return result
 }

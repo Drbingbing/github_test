@@ -6,16 +6,16 @@
 //
 
 import Foundation
+import GitModel
 
 extension Api.functions.search {
     
-    public static func searchUsers(_ query: String) -> (FunctionDescription, String, DeserializeFunctionResponse<[String]>) {
+    public static func searchUsers(_ query: String) -> (FunctionDescription, String, DeserializeFunctionResponse<GitUserResult>) {
         return (
             FunctionDescription(method: .get, parameters: ["q": query]),
             "/search/users",
-            DeserializeFunctionResponse { data in
-                guard let data else { return nil }
-                return []
+            DeserializeFunctionResponse { data -> GitUserResult in
+                return try Api.parse(json: data)
             }
         )
     }

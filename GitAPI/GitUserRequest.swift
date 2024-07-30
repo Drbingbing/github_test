@@ -26,6 +26,10 @@ final class GitUserRequest {
         headers = h
     }
     
+    func setHeader(_ h: [String: String]) {
+        headers = .init(h)
+    }
+    
     func setParameter(_ p: [String: Any]) {
         parameters = p
     }
@@ -42,7 +46,6 @@ extension Session {
             fatalError("Unable to find url, path: \(r.path) relative to: \(base)")
         }
         let dataTask = self.request(url, method: r.method, parameters: r.parameters, headers: r.headers)
-            .validate()
             .serializingResponse(using: .data, automaticallyCancelling: false)
         
         return await dataTask.response

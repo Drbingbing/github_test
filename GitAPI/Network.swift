@@ -24,20 +24,23 @@ public final class Network {
         self.logging = logging
     }
     
-    public func request<T>(data: (FunctionDescription, String, DeserializeFunctionResponse<T>)) async throws -> Result<T?, Error> {
+    public func request<T>(data: (FunctionDescription, String, DeserializeFunctionResponse<T>)) async throws -> T {
         let request = GitUserRequest(path: data.1)
         request.setParameter(data.0.parameters)
         request.setMethod(data.0.method)
+        request.setHeader(["Accept": "application/vnd.github+json"])
         
         let response = try await session.add(request, relativeTo: serverConfig.apiURL)
-        if let logging {
-            logging(response.debugDescription)
-        }
-        switch response.result {
-        case let .success(d):
-            return .success(data.2.parse(d))
-        case let .failure(e):
-            return .failure(e)
+        
+        logging?(response.debugDescription)
+        
+        let result = try response.result.get()
+        
+        do {
+            return try data.2.parse(result)
+        } catch {
+            logging?(error.localizedDescription)
+            throw error
         }
     }
 }

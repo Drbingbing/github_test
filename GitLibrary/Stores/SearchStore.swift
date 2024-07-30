@@ -7,6 +7,7 @@
 
 import Foundation
 import ComposableArchitecture
+import GitModel
 
 @Reducer
 public struct SearchStore {
@@ -17,7 +18,7 @@ public struct SearchStore {
     
     public struct State: Equatable {
         public var isSearching: Bool = false
-        public var users: [String] = []
+        public var users: [GitUser] = []
         public var errorMessage: String?
         public var searchQuery: String = ""
         
@@ -29,7 +30,7 @@ public struct SearchStore {
         case searchDidEnd
         case searchQueryChanged(String)
         case searchQueryChangeDebounced
-        case searchResult(TaskResult<[String]>)
+        case searchResult(Result<[GitUser], Error>)
     }
     
     public var body: some ReducerOf<Self> {
@@ -50,7 +51,14 @@ public struct SearchStore {
                 print(state.searchQuery)
                 return .merge(
                     .send(.searchDidBegin),
-                    .run { [query = state.searchQuery] in await $0(.searchResult(TaskResult { try await context.engine.seach.searchUsers(query: query) })) }
+                    .run { [query = state.searchQuery] send in
+                        await send(
+                            .searchResult(
+                                Result { try await context.engine.seach.searchUsers(query: query) }
+                                    .map(\.items)
+                            )
+                        )
+                    }
                 ).cancellable(id: CancelID.search)
             case .searchDidBegin:
                 state.isSearching = true

@@ -36,6 +36,9 @@
 		44105E382C5929BA004D4A45 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105DE72C590B5C004D4A45 /* Logging.swift */; };
 		44105E392C5931AC004D4A45 /* libGitLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44105E092C591616004D4A45 /* libGitLibrary.a */; };
 		44105E4A2C5936E4004D4A45 /* GitUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E492C5936E4004D4A45 /* GitUser.swift */; };
+		44105E4B2C593C2D004D4A45 /* libGitModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44105E422C5936C5004D4A45 /* libGitModel.a */; };
+		44105E4C2C593D07004D4A45 /* libGitModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44105E422C5936C5004D4A45 /* libGitModel.a */; };
+		44105E4D2C593F6A004D4A45 /* libGitModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44105E422C5936C5004D4A45 /* libGitModel.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44105E4C2C593D07004D4A45 /* libGitModel.a in Frameworks */,
 				44105DFC2C59103F004D4A45 /* libGitAPI.a in Frameworks */,
 				44105DE52C590A46004D4A45 /* Alamofire in Frameworks */,
 			);
@@ -158,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44105E4B2C593C2D004D4A45 /* libGitModel.a in Frameworks */,
 				44105DF92C590C0E004D4A45 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44105E4D2C593F6A004D4A45 /* libGitModel.a in Frameworks */,
 				44105E122C591646004D4A45 /* libGitUserCore.a in Frameworks */,
 				44105E112C591646004D4A45 /* ComposableArchitecture in Frameworks */,
 			);

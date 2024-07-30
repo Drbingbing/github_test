@@ -15,8 +15,8 @@ public enum Api {
 
 extension Api {
     
-    static func parse<T: Decodable>(json j: Data) -> T? {
+    static func parse<T: Decodable>(json j: Data) throws -> T {
         let decoder = JSONDecoder()
-        return try? decoder.decode(T.self, from: j)
+        return try decoder.decode(T.self, from: j)
     }
 }

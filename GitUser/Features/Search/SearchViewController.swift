@@ -35,6 +35,12 @@ final class SearchViewController: ViewController {
                 
             }
             .store(in: &cancellables)
+        
+        store.publisher.users
+            .sink { users in
+                print(users)
+            }
+            .store(in: &cancellables)
     }
     
     private func setupSearchBar() {
