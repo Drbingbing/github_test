@@ -56,8 +56,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 private func nativeWindowHostView(from scene: UIWindowScene) -> UIWindow {
     let window = UIWindow(windowScene: scene)
     
-    let rootViewController = ViewController()
-    let navigationController = NavigationController(rootViewController: rootViewController)
+    let rootViewController = SearchViewController()
+    let navigationController = UINavigationController(rootViewController: rootViewController)
     
     window.rootViewController = navigationController
     

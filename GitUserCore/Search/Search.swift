@@ -9,11 +9,19 @@ import Foundation
 
 extension GitUserEngine {
     
-    final class SearchUser {
+    public final class SearchUser {
         private let account: Account
         
         init(account: Account) {
             self.account = account
         }
+        
+        public func searchUsers(query: String) async throws -> [String] {
+            return try await _internal_searchUsers(account: account, query: query)
+        }
     }
+}
+
+func _internal_searchUsers(account: Account, query: String) async throws -> [String] {
+    []
 }

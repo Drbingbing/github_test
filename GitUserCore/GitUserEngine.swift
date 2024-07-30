@@ -17,7 +17,7 @@ public final class GitUserEngine {
         Logbox.setSharedLogger(Logbox())
     }
     
-    lazy var seach: SearchUser = {
+    public lazy var seach: SearchUser = {
         return SearchUser(account: account)
     }()
 }
