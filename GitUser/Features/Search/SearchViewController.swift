@@ -6,14 +6,20 @@
 //
 
 import UIKit
+import Combine
+import ComposableArchitecture
+import GitLibrary
 
 final class SearchViewController: ViewController {
+    
+    lazy var store: StoreOf<SearchStore> = Store(initialState: SearchStore.State()) { SearchStore() }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupSearchBar()
         setupSearchResultController()
+        bindingStore()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -23,8 +29,17 @@ final class SearchViewController: ViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
+    private func bindingStore() {
+        store.publisher.isSearching
+            .sink { isSearching in
+                
+            }
+            .store(in: &cancellables)
+    }
+    
     private func setupSearchBar() {
         let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.delegate = self
         navigationItem.searchController = searchController
     }
     
@@ -46,4 +61,21 @@ final class SearchViewController: ViewController {
     
     // MARK: - Private Properties
     private weak var searchResultViewController: SearchResultController?
+    
+    private var cancellables: [AnyCancellable] = []
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        store.send(.searchQueryChanged(searchBar.text ?? ""), animation: .default)
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        store.send(.searchDidEnd)
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        store.send(.searchDidBegin)
+    }
 }

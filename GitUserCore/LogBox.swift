@@ -9,19 +9,20 @@ import Dispatch
 
 private var sharedLogger: Logbox?
 
-final class Logbox {
+public final class Logbox {
     
     private let basePath: String
     private let maxLength: Int = 2 * 1024 * 1024
     private let maxFiles: Int = 20
     
-    init() {
-        let pathURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0].appending(path: "/logs/app-logs")
+    public init() {
+        let pathURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0].appending(path: "logs/app-logs")
         basePath = pathURL.path
         let _ = try? FileManager.default.createDirectory(atPath: basePath, withIntermediateDirectories: true, attributes: nil)
+        debugPrint("log folder location: \(basePath)")
     }
     
-    private let queue = DispatchQueue(label: "org.taiwan-mobile.com.log")
+    private let queue = DispatchQueue(label: "bingbing.log")
     
     private var logToConsole: Bool = true
     
@@ -30,7 +31,7 @@ final class Logbox {
     static func setSharedLogger(_ logger: Logbox) {
         sharedLogger = logger
         setEngineLogger { s in
-            sharedLogger?.log("SDK Engine", s)
+            sharedLogger?.log("GitUser", s)
         } sync: {
             sharedLogger?.sync()
         }

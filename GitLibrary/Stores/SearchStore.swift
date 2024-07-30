@@ -11,12 +11,15 @@ import ComposableArchitecture
 @Reducer
 public struct SearchStore {
     
+    private enum CancelID { case search }
+    
     @Dependency(\.appContext) var context
     
     public struct State: Equatable {
         public var isSearching: Bool = false
         public var users: [String] = []
         public var errorMessage: String?
+        public var searchQuery: String = ""
         
         public init() {}
     }
@@ -24,18 +27,31 @@ public struct SearchStore {
     public enum Action {
         case searchDidBegin
         case searchDidEnd
-        case searchTextChanged(String)
+        case searchQueryChanged(String)
+        case searchQueryChangeDebounced
         case searchResult(TaskResult<[String]>)
     }
     
     public var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
-            case let .searchTextChanged(query):
+            case let .searchQueryChanged(query):
+                state.searchQuery = query
+                guard !state.searchQuery.isEmpty else {
+                    state.users = []
+                    return .cancel(id: CancelID.search)
+                }
+                return .send(.searchQueryChangeDebounced)
+                    .debounce(id: CancelID.search, for: .milliseconds(500), scheduler: DispatchQueue.main)
+            case .searchQueryChangeDebounced:
+                guard !state.searchQuery.isEmpty else {
+                    return .none
+                }
+                print(state.searchQuery)
                 return .merge(
                     .send(.searchDidBegin),
-                    .run { await $0(.searchResult(TaskResult { try await context.engine.seach.searchUsers(query: query) })) }
-                )
+                    .run { [query = state.searchQuery] in await $0(.searchResult(TaskResult { try await context.engine.seach.searchUsers(query: query) })) }
+                ).cancellable(id: CancelID.search)
             case .searchDidBegin:
                 state.isSearching = true
                 return .none

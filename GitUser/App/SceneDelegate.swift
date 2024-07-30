@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GitLibrary
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -20,6 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = nativeWindowHostView(from: windowScene)
         window?.makeKeyAndVisible()
+        
+        _ = Context.liveValue
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

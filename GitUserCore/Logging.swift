@@ -10,15 +10,15 @@ import Foundation
 private var engineLogger: (String) -> Void = { _ in }
 private var engineLoggerSync: () -> Void = {}
 
-func setEngineLogger(_ f: @escaping (String) -> Void, sync: @escaping () -> Void) {
+public func setEngineLogger(_ f: @escaping (String) -> Void, sync: @escaping () -> Void) {
     engineLogger = f
     engineLoggerSync = sync
 }
 
-func engineLog(_ what: @autoclosure () -> String) {
+public func engineLog(_ what: @autoclosure () -> String) {
     engineLogger(what())
 }
 
-func engineLogSync() {
+public func engineLogSync() {
     engineLoggerSync()
 }

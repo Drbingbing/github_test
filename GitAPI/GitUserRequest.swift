@@ -16,9 +16,9 @@ final class GitUserRequest {
     
     var completed: ((Result<Data?, AFError>) -> Void)?
     
-    let path: URL
+    let path: String
     
-    init(path: URL) {
+    init(path: String) {
         self.path = path
     }
     
@@ -37,12 +37,14 @@ final class GitUserRequest {
 
 extension Session {
     
-    func add(_ r: GitUserRequest) async throws -> Result<Data, AFError> {
-        let dataTask = self.request(r.path, method: r.method, parameters: r.parameters, headers: r.headers)
+    func add(_ r: GitUserRequest, relativeTo base: URL) async throws -> DataResponse<Data, AFError> {
+        guard let url = URL(string: r.path, relativeTo: base) else {
+            fatalError("Unable to find url, path: \(r.path) relative to: \(base)")
+        }
+        let dataTask = self.request(url, method: r.method, parameters: r.parameters, headers: r.headers)
             .validate()
             .serializingResponse(using: .data, automaticallyCancelling: false)
         
-        let response = await dataTask.response
-        return response.result
+        return await dataTask.response
     }
 }

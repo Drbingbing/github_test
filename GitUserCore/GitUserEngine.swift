@@ -31,7 +31,7 @@ extension GitUserEngine {
         #else
         config = ServerConfigImpl.produtcion
         #endif
-        let network = initalizeNetwork(serverConfig: config)
+        let network = initalizeNetwork(serverConfig: config, logging: { engineLog($0) })
         let account = Account(network: network)
         
         self.init(account: account)

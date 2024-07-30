@@ -18,20 +18,24 @@
 		44105DCD2C59036D004D4A45 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105DCC2C59036D004D4A45 /* Search.swift */; };
 		44105DDB2C59060B004D4A45 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105DDA2C59060B004D4A45 /* Account.swift */; };
 		44105DE52C590A46004D4A45 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 44105DE42C590A46004D4A45 /* Alamofire */; };
-		44105DE82C590B5C004D4A45 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105DE72C590B5C004D4A45 /* Logging.swift */; };
 		44105DF42C590BEC004D4A45 /* GitUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105DE12C5909D3004D4A45 /* GitUserRequest.swift */; };
 		44105DF62C590BEC004D4A45 /* FunctionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105DDF2C590838004D4A45 /* FunctionDescription.swift */; };
 		44105DF72C590BF2004D4A45 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105DDD2C590729004D4A45 /* Network.swift */; };
 		44105DF92C590C0E004D4A45 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 44105DF82C590C0E004D4A45 /* Alamofire */; };
 		44105DFB2C590C70004D4A45 /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105DFA2C590C70004D4A45 /* ServerConfig.swift */; };
 		44105DFC2C59103F004D4A45 /* libGitAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44105DED2C590BE3004D4A45 /* libGitAPI.a */; };
-		44105E012C5914A9004D4A45 /* LogBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E002C5914A9004D4A45 /* LogBox.swift */; };
 		44105E112C591646004D4A45 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 44105E102C591646004D4A45 /* ComposableArchitecture */; };
 		44105E122C591646004D4A45 /* libGitUserCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44105DC42C590333004D4A45 /* libGitUserCore.a */; };
 		44105E162C5916D2004D4A45 /* SearchStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E152C5916D2004D4A45 /* SearchStore.swift */; };
 		44105E172C59186B004D4A45 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105DFE2C59137E004D4A45 /* Context.swift */; };
 		44105E1B2C5919B1004D4A45 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E1A2C5919B1004D4A45 /* SearchViewController.swift */; };
 		44105E1F2C591EE4004D4A45 /* SearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E1E2C591EE4004D4A45 /* SearchResultController.swift */; };
+		44105E212C5924AE004D4A45 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E202C5924AE004D4A45 /* Api.swift */; };
+		44105E232C5924E4004D4A45 /* Api_Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E222C5924E4004D4A45 /* Api_Search.swift */; };
+		44105E372C5929BA004D4A45 /* LogBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E002C5914A9004D4A45 /* LogBox.swift */; };
+		44105E382C5929BA004D4A45 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105DE72C590B5C004D4A45 /* Logging.swift */; };
+		44105E392C5931AC004D4A45 /* libGitLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44105E092C591616004D4A45 /* libGitLibrary.a */; };
+		44105E4A2C5936E4004D4A45 /* GitUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E492C5936E4004D4A45 /* GitUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +45,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 44105DC32C590333004D4A45;
 			remoteInfo = GitUserCore;
+		};
+		44105E3A2C5931AC004D4A45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 440D322B2C58EDB5002C9D42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44105E082C591616004D4A45;
+			remoteInfo = GitLibrary;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -82,6 +93,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		44105E402C5936C5004D4A45 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +128,10 @@
 		44105E152C5916D2004D4A45 /* SearchStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStore.swift; sourceTree = "<group>"; };
 		44105E1A2C5919B1004D4A45 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		44105E1E2C591EE4004D4A45 /* SearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultController.swift; sourceTree = "<group>"; };
+		44105E202C5924AE004D4A45 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		44105E222C5924E4004D4A45 /* Api_Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api_Search.swift; sourceTree = "<group>"; };
+		44105E422C5936C5004D4A45 /* libGitModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGitModel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		44105E492C5936E4004D4A45 /* GitUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +141,7 @@
 			files = (
 				44105D932C58F706004D4A45 /* ComposableArchitecture in Frameworks */,
 				44105D962C58F74F004D4A45 /* BaseToolbox in Frameworks */,
+				44105E392C5931AC004D4A45 /* libGitLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +171,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		44105E3F2C5936C5004D4A45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -156,6 +188,7 @@
 				44105DC52C590333004D4A45 /* GitUserCore */,
 				44105DEE2C590BE3004D4A45 /* GitAPI */,
 				44105E0A2C591616004D4A45 /* GitLibrary */,
+				44105E432C5936C5004D4A45 /* GitModel */,
 				440D32342C58EDB5002C9D42 /* Products */,
 				44105DBD2C590003004D4A45 /* Frameworks */,
 			);
@@ -168,6 +201,7 @@
 				44105DC42C590333004D4A45 /* libGitUserCore.a */,
 				44105DED2C590BE3004D4A45 /* libGitAPI.a */,
 				44105E092C591616004D4A45 /* libGitLibrary.a */,
+				44105E422C5936C5004D4A45 /* libGitModel.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,7 +246,8 @@
 		44105DC52C590333004D4A45 /* GitUserCore */ = {
 			isa = PBXGroup;
 			children = (
-				44105DE62C590B4C004D4A45 /* Logging */,
+				44105DE72C590B5C004D4A45 /* Logging.swift */,
+				44105E002C5914A9004D4A45 /* LogBox.swift */,
 				44105DD92C590603004D4A45 /* Account */,
 				44105DCB2C59035F004D4A45 /* Search */,
 				44105DC62C590333004D4A45 /* GitUserEngine.swift */,
@@ -236,15 +271,6 @@
 			path = Account;
 			sourceTree = "<group>";
 		};
-		44105DE62C590B4C004D4A45 /* Logging */ = {
-			isa = PBXGroup;
-			children = (
-				44105DE72C590B5C004D4A45 /* Logging.swift */,
-				44105E002C5914A9004D4A45 /* LogBox.swift */,
-			);
-			path = Logging;
-			sourceTree = "<group>";
-		};
 		44105DEE2C590BE3004D4A45 /* GitAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +278,8 @@
 				44105DDF2C590838004D4A45 /* FunctionDescription.swift */,
 				44105DE12C5909D3004D4A45 /* GitUserRequest.swift */,
 				44105DFA2C590C70004D4A45 /* ServerConfig.swift */,
+				44105E202C5924AE004D4A45 /* Api.swift */,
+				44105E222C5924E4004D4A45 /* Api_Search.swift */,
 			);
 			path = GitAPI;
 			sourceTree = "<group>";
@@ -298,6 +326,14 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		44105E432C5936C5004D4A45 /* GitModel */ = {
+			isa = PBXGroup;
+			children = (
+				44105E492C5936E4004D4A45 /* GitUser.swift */,
+			);
+			path = GitModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -314,6 +350,7 @@
 			);
 			dependencies = (
 				44105E042C591570004D4A45 /* PBXTargetDependency */,
+				44105E3B2C5931AC004D4A45 /* PBXTargetDependency */,
 			);
 			name = GitUser;
 			packageProductDependencies = (
@@ -384,6 +421,23 @@
 			productReference = 44105E092C591616004D4A45 /* libGitLibrary.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		44105E412C5936C5004D4A45 /* GitModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44105E462C5936C5004D4A45 /* Build configuration list for PBXNativeTarget "GitModel" */;
+			buildPhases = (
+				44105E3E2C5936C5004D4A45 /* Sources */,
+				44105E3F2C5936C5004D4A45 /* Frameworks */,
+				44105E402C5936C5004D4A45 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GitModel;
+			productName = GitModel;
+			productReference = 44105E422C5936C5004D4A45 /* libGitModel.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -404,6 +458,10 @@
 						CreatedOnToolsVersion = 15.4;
 					};
 					44105E082C591616004D4A45 = {
+						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
+					};
+					44105E412C5936C5004D4A45 = {
 						CreatedOnToolsVersion = 15.4;
 						LastSwiftMigration = 1540;
 					};
@@ -431,6 +489,7 @@
 				44105DC32C590333004D4A45 /* GitUserCore */,
 				44105DEC2C590BE3004D4A45 /* GitAPI */,
 				44105E082C591616004D4A45 /* GitLibrary */,
+				44105E412C5936C5004D4A45 /* GitModel */,
 			);
 		};
 /* End PBXProject section */
@@ -464,10 +523,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44105E012C5914A9004D4A45 /* LogBox.swift in Sources */,
 				44105DC72C590333004D4A45 /* GitUserEngine.swift in Sources */,
+				44105E382C5929BA004D4A45 /* Logging.swift in Sources */,
 				44105DCD2C59036D004D4A45 /* Search.swift in Sources */,
-				44105DE82C590B5C004D4A45 /* Logging.swift in Sources */,
+				44105E372C5929BA004D4A45 /* LogBox.swift in Sources */,
 				44105DDB2C59060B004D4A45 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,6 +538,8 @@
 				44105DF42C590BEC004D4A45 /* GitUserRequest.swift in Sources */,
 				44105DF62C590BEC004D4A45 /* FunctionDescription.swift in Sources */,
 				44105DFB2C590C70004D4A45 /* ServerConfig.swift in Sources */,
+				44105E232C5924E4004D4A45 /* Api_Search.swift in Sources */,
+				44105E212C5924AE004D4A45 /* Api.swift in Sources */,
 				44105DF72C590BF2004D4A45 /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +553,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		44105E3E2C5936C5004D4A45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44105E4A2C5936E4004D4A45 /* GitUser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -499,6 +568,11 @@
 			isa = PBXTargetDependency;
 			target = 44105DC32C590333004D4A45 /* GitUserCore */;
 			targetProxy = 44105E032C591570004D4A45 /* PBXContainerItemProxy */;
+		};
+		44105E3B2C5931AC004D4A45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44105E082C591616004D4A45 /* GitLibrary */;
+			targetProxy = 44105E3A2C5931AC004D4A45 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -566,7 +640,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -623,7 +697,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -746,6 +820,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -756,6 +831,34 @@
 			name = Debug;
 		};
 		44105E0F2C591616004D4A45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		44105E472C5936C5004D4A45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		44105E482C5936C5004D4A45 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -812,6 +915,15 @@
 			buildConfigurations = (
 				44105E0E2C591616004D4A45 /* Debug */,
 				44105E0F2C591616004D4A45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44105E462C5936C5004D4A45 /* Build configuration list for PBXNativeTarget "GitModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44105E472C5936C5004D4A45 /* Debug */,
+				44105E482C5936C5004D4A45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

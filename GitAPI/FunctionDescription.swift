@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import Alamofire
 
 public final class FunctionDescription {
-    public let method: String
+    public let method: HTTPMethod
     public let parameters: [String: Any]
     
-    init(method: String, parameters: [String: Any]) {
+    init(method: HTTPMethod, parameters: [String: Any]) {
         self.method = method
         self.parameters = parameters
     }
