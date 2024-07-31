@@ -10,9 +10,16 @@ import GitModel
 
 extension Api.functions.search {
     
-    public static func searchUsers(_ query: String) -> (FunctionDescription, String, DeserializeFunctionResponse<GitUserResult>) {
+    public typealias Output = (FunctionDescription, String, DeserializeFunctionResponse<GitUserResult>)
+    
+    public static func searchUsers(_ query: String, _ page: Int) -> Output {
+        let parameter: [String :Any] = [
+            "q": "\(query) in:login type:user",
+            "per_page": 20,
+            "page": page
+        ]
         return (
-            FunctionDescription(method: .get, parameters: ["q": query]),
+            FunctionDescription(method: .get, parameters: parameter),
             "/search/users",
             DeserializeFunctionResponse { data -> GitUserResult in
                 return try Api.parse(json: data)

@@ -1,5 +1,5 @@
 {
-  "originHash" : "7a0120a008dc2e9d4bd8fcf76be6e4eddeb9ad88b93f37aaea0dbcbe5a5c8573",
+  "originHash" : "1f34d79756d41bc599a43060986415391a6e84c501c07c0d0f4d5c714b5cf07c",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -125,6 +125,15 @@
       "state" : {
         "revision" : "fc91d591ebba1f90d65028ccb65c861e5979e898",
         "version" : "1.5.4"
+      }
+    },
+    {
+      "identity" : "uicomponent",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/lkzhao/UIComponent",
+      "state" : {
+        "revision" : "a88e30f820a8efaabb94062d1515349a9dad2a5b",
+        "version" : "3.0.5"
       }
     },
     {

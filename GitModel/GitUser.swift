@@ -23,7 +23,7 @@ public struct GitUserResult: Decodable {
     }
 }
 
-public struct GitUser: Decodable, Equatable {
+public struct GitUser: Decodable, Hashable {
     
     public let login: String
     public let id: Int
@@ -32,6 +32,7 @@ public struct GitUser: Decodable, Equatable {
     public let reposUrl: String
     public let followersUrl: String
     public let siteAdmin: Bool
+    public let htmlUrl: String
     
     private enum CodingKeys: String, CodingKey {
         case login, score, id
@@ -39,9 +40,10 @@ public struct GitUser: Decodable, Equatable {
         case reposUrl = "repos_url"
         case followersUrl = "followers_url"
         case siteAdmin = "site_admin"
+        case htmlUrl = "html_url"
     }
     
-    public init(login: String, id: Int, avatarUrl: String, score: Double, reposUrl: String, followersUrl: String, siteAdmin: Bool) {
+    public init(login: String, id: Int, avatarUrl: String, score: Double, reposUrl: String, followersUrl: String, siteAdmin: Bool, htmlUrl: String) {
         self.login = login
         self.id = id
         self.avatarUrl = avatarUrl
@@ -49,5 +51,6 @@ public struct GitUser: Decodable, Equatable {
         self.reposUrl = reposUrl
         self.followersUrl = followersUrl
         self.siteAdmin = siteAdmin
+        self.htmlUrl = htmlUrl
     }
 }

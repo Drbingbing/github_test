@@ -37,8 +37,8 @@ final class SearchViewController: ViewController {
             .store(in: &cancellables)
         
         store.publisher.users
-            .sink { users in
-                print(users)
+            .sink { [weak self] users in
+                self?.searchResultViewController?.populate(users: users, animated: true)
             }
             .store(in: &cancellables)
     }
@@ -59,6 +59,7 @@ final class SearchViewController: ViewController {
         resultController.view.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
         resultController.view.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
         resultController.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        resultController.delegate = self
         
         didMove(toParent: self)
         
@@ -83,5 +84,19 @@ extension SearchViewController: UISearchBarDelegate {
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         store.send(.searchDidBegin)
+    }
+}
+
+// MARK: - Delegate
+extension SearchViewController: SearchResultControllerDelegate {
+    
+    func didUserLinkTapped(_ link: String) {
+        let web = WebViewController()
+        web.urlString = link
+        self.sheet(web)
+    }
+    
+    func didSearchResultScrollToBottom() {
+        store.send(.didScrollViewScrollToBottom)
     }
 }

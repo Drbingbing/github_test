@@ -18,13 +18,13 @@ extension GitUserEngine {
             self.account = account
         }
         
-        public func searchUsers(query: String) async throws -> GitUserResult {
-            return try await _internal_searchUsers(account: account, query: query)
+        public func searchUsers(query: String, page: Int) async throws -> GitUserResult {
+            return try await _internal_searchUsers(account: account, query: query, page: page)
         }
     }
 }
 
-func _internal_searchUsers(account: Account, query: String) async throws -> GitUserResult {
-    let result = try await account.network.request(data: Api.functions.search.searchUsers(query))
+func _internal_searchUsers(account: Account, query: String, page: Int) async throws -> GitUserResult {
+    let result = try await account.network.request(data: Api.functions.search.searchUsers(query, page))
     return result
 }

@@ -39,6 +39,27 @@
 		44105E4B2C593C2D004D4A45 /* libGitModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44105E422C5936C5004D4A45 /* libGitModel.a */; };
 		44105E4C2C593D07004D4A45 /* libGitModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44105E422C5936C5004D4A45 /* libGitModel.a */; };
 		44105E4D2C593F6A004D4A45 /* libGitModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44105E422C5936C5004D4A45 /* libGitModel.a */; };
+		44105E522C59E08C004D4A45 /* UIComponent in Frameworks */ = {isa = PBXBuildFile; productRef = 44105E512C59E08C004D4A45 /* UIComponent */; };
+		44105E552C59E355004D4A45 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E542C59E355004D4A45 /* Font+Extension.swift */; };
+		44105E572C59E5A7004D4A45 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E562C59E5A7004D4A45 /* Colors.swift */; };
+		44105E6D2C5A6EB5004D4A45 /* ModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E582C5A6EB4004D4A45 /* ModalAnimator.swift */; };
+		44105E6E2C5A6EB5004D4A45 /* ModalPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E592C5A6EB4004D4A45 /* ModalPresentationAnimator.swift */; };
+		44105E6F2C5A6EB5004D4A45 /* ModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E5B2C5A6EB4004D4A45 /* ModalPresentationController.swift */; };
+		44105E702C5A6EB5004D4A45 /* ModalPresentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E5D2C5A6EB4004D4A45 /* ModalPresentationDelegate.swift */; };
+		44105E712C5A6EB5004D4A45 /* ModalHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E5F2C5A6EB4004D4A45 /* ModalHeight.swift */; };
+		44105E722C5A6EB5004D4A45 /* ModalPresent+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E602C5A6EB4004D4A45 /* ModalPresent+UIViewController.swift */; };
+		44105E732C5A6EB5004D4A45 /* ModalPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E612C5A6EB4004D4A45 /* ModalPresentable.swift */; };
+		44105E742C5A6EB5004D4A45 /* ModalPresentable+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E622C5A6EB4004D4A45 /* ModalPresentable+Default.swift */; };
+		44105E752C5A6EB5004D4A45 /* ModalPresentable+LayoutHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E632C5A6EB4004D4A45 /* ModalPresentable+LayoutHelpers.swift */; };
+		44105E762C5A6EB5004D4A45 /* ModalPresentBackgroundInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E642C5A6EB4004D4A45 /* ModalPresentBackgroundInteraction.swift */; };
+		44105E772C5A6EB5004D4A45 /* ModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E662C5A6EB4004D4A45 /* ModalPresenter.swift */; };
+		44105E782C5A6EB5004D4A45 /* ModalPresenter+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E672C5A6EB4004D4A45 /* ModalPresenter+UIViewController.swift */; };
+		44105E792C5A6EB5004D4A45 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E692C5A6EB4004D4A45 /* ContainerView.swift */; };
+		44105E7A2C5A6EB5004D4A45 /* DimmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E6A2C5A6EB4004D4A45 /* DimmedView.swift */; };
+		44105E7C2C5A6F0A004D4A45 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E7B2C5A6F0A004D4A45 /* WebViewController.swift */; };
+		44105E7E2C5A7244004D4A45 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E7D2C5A7244004D4A45 /* ViewController+Extension.swift */; };
+		44105E802C5A72E4004D4A45 /* ScrollViewBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E7F2C5A72E4004D4A45 /* ScrollViewBehavior.swift */; };
+		44105E822C5A7341004D4A45 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E812C5A7341004D4A45 /* UIScrollView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +156,26 @@
 		44105E222C5924E4004D4A45 /* Api_Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api_Search.swift; sourceTree = "<group>"; };
 		44105E422C5936C5004D4A45 /* libGitModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGitModel.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		44105E492C5936E4004D4A45 /* GitUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUser.swift; sourceTree = "<group>"; };
+		44105E542C59E355004D4A45 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		44105E562C59E5A7004D4A45 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		44105E582C5A6EB4004D4A45 /* ModalAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalAnimator.swift; sourceTree = "<group>"; };
+		44105E592C5A6EB4004D4A45 /* ModalPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresentationAnimator.swift; sourceTree = "<group>"; };
+		44105E5B2C5A6EB4004D4A45 /* ModalPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresentationController.swift; sourceTree = "<group>"; };
+		44105E5D2C5A6EB4004D4A45 /* ModalPresentationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresentationDelegate.swift; sourceTree = "<group>"; };
+		44105E5F2C5A6EB4004D4A45 /* ModalHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalHeight.swift; sourceTree = "<group>"; };
+		44105E602C5A6EB4004D4A45 /* ModalPresent+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ModalPresent+UIViewController.swift"; sourceTree = "<group>"; };
+		44105E612C5A6EB4004D4A45 /* ModalPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresentable.swift; sourceTree = "<group>"; };
+		44105E622C5A6EB4004D4A45 /* ModalPresentable+Default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ModalPresentable+Default.swift"; sourceTree = "<group>"; };
+		44105E632C5A6EB4004D4A45 /* ModalPresentable+LayoutHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ModalPresentable+LayoutHelpers.swift"; sourceTree = "<group>"; };
+		44105E642C5A6EB4004D4A45 /* ModalPresentBackgroundInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresentBackgroundInteraction.swift; sourceTree = "<group>"; };
+		44105E662C5A6EB4004D4A45 /* ModalPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresenter.swift; sourceTree = "<group>"; };
+		44105E672C5A6EB4004D4A45 /* ModalPresenter+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ModalPresenter+UIViewController.swift"; sourceTree = "<group>"; };
+		44105E692C5A6EB4004D4A45 /* ContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		44105E6A2C5A6EB4004D4A45 /* DimmedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimmedView.swift; sourceTree = "<group>"; };
+		44105E7B2C5A6F0A004D4A45 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		44105E7D2C5A7244004D4A45 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
+		44105E7F2C5A72E4004D4A45 /* ScrollViewBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewBehavior.swift; sourceTree = "<group>"; };
+		44105E812C5A7341004D4A45 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +183,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44105E522C59E08C004D4A45 /* UIComponent in Frameworks */,
 				44105D932C58F706004D4A45 /* ComposableArchitecture in Frameworks */,
 				44105D962C58F74F004D4A45 /* BaseToolbox in Frameworks */,
 				44105E392C5931AC004D4A45 /* libGitLibrary.a in Frameworks */,
@@ -215,6 +257,8 @@
 		440D32352C58EDB5002C9D42 /* GitUser */ = {
 			isa = PBXGroup;
 			children = (
+				44105E6C2C5A6EB4004D4A45 /* ModalPresenter */,
+				44105E532C59E346004D4A45 /* Utils */,
 				44105E182C59197A004D4A45 /* Features */,
 				44105D8E2C58EFF4004D4A45 /* Components */,
 				44105D8D2C58EF72004D4A45 /* App */,
@@ -237,7 +281,9 @@
 		44105D8E2C58EFF4004D4A45 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				44105E7B2C5A6F0A004D4A45 /* WebViewController.swift */,
 				440D323A2C58EDB5002C9D42 /* ViewController.swift */,
+				44105E7F2C5A72E4004D4A45 /* ScrollViewBehavior.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -340,6 +386,86 @@
 			path = GitModel;
 			sourceTree = "<group>";
 		};
+		44105E532C59E346004D4A45 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				44105E542C59E355004D4A45 /* Font+Extension.swift */,
+				44105E562C59E5A7004D4A45 /* Colors.swift */,
+				44105E7D2C5A7244004D4A45 /* ViewController+Extension.swift */,
+				44105E812C5A7341004D4A45 /* UIScrollView+Extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		44105E5A2C5A6EB4004D4A45 /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				44105E582C5A6EB4004D4A45 /* ModalAnimator.swift */,
+				44105E592C5A6EB4004D4A45 /* ModalPresentationAnimator.swift */,
+			);
+			path = Animator;
+			sourceTree = "<group>";
+		};
+		44105E5C2C5A6EB4004D4A45 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				44105E5B2C5A6EB4004D4A45 /* ModalPresentationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		44105E5E2C5A6EB4004D4A45 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				44105E5D2C5A6EB4004D4A45 /* ModalPresentationDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		44105E652C5A6EB4004D4A45 /* Presentable */ = {
+			isa = PBXGroup;
+			children = (
+				44105E5F2C5A6EB4004D4A45 /* ModalHeight.swift */,
+				44105E602C5A6EB4004D4A45 /* ModalPresent+UIViewController.swift */,
+				44105E612C5A6EB4004D4A45 /* ModalPresentable.swift */,
+				44105E622C5A6EB4004D4A45 /* ModalPresentable+Default.swift */,
+				44105E632C5A6EB4004D4A45 /* ModalPresentable+LayoutHelpers.swift */,
+				44105E642C5A6EB4004D4A45 /* ModalPresentBackgroundInteraction.swift */,
+			);
+			path = Presentable;
+			sourceTree = "<group>";
+		};
+		44105E682C5A6EB4004D4A45 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				44105E662C5A6EB4004D4A45 /* ModalPresenter.swift */,
+				44105E672C5A6EB4004D4A45 /* ModalPresenter+UIViewController.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		44105E6B2C5A6EB4004D4A45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44105E692C5A6EB4004D4A45 /* ContainerView.swift */,
+				44105E6A2C5A6EB4004D4A45 /* DimmedView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		44105E6C2C5A6EB4004D4A45 /* ModalPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				44105E5A2C5A6EB4004D4A45 /* Animator */,
+				44105E5C2C5A6EB4004D4A45 /* Controller */,
+				44105E5E2C5A6EB4004D4A45 /* Delegate */,
+				44105E652C5A6EB4004D4A45 /* Presentable */,
+				44105E682C5A6EB4004D4A45 /* Presenter */,
+				44105E6B2C5A6EB4004D4A45 /* View */,
+			);
+			path = ModalPresenter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -362,6 +488,7 @@
 			packageProductDependencies = (
 				44105D922C58F706004D4A45 /* ComposableArchitecture */,
 				44105D952C58F74F004D4A45 /* BaseToolbox */,
+				44105E512C59E08C004D4A45 /* UIComponent */,
 			);
 			productName = GitUser;
 			productReference = 440D32332C58EDB5002C9D42 /* GitUser.app */;
@@ -486,6 +613,7 @@
 				44105D912C58F706004D4A45 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				44105D942C58F74F004D4A45 /* XCRemoteSwiftPackageReference "BaseToolbox" */,
 				44105DE32C590A46004D4A45 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				44105E502C59E08C004D4A45 /* XCRemoteSwiftPackageReference "UIComponent" */,
 			);
 			productRefGroup = 440D32342C58EDB5002C9D42 /* Products */;
 			projectDirPath = "";
@@ -517,11 +645,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44105E7A2C5A6EB5004D4A45 /* DimmedView.swift in Sources */,
+				44105E7C2C5A6F0A004D4A45 /* WebViewController.swift in Sources */,
+				44105E792C5A6EB5004D4A45 /* ContainerView.swift in Sources */,
 				44105E1B2C5919B1004D4A45 /* SearchViewController.swift in Sources */,
+				44105E6F2C5A6EB5004D4A45 /* ModalPresentationController.swift in Sources */,
+				44105E702C5A6EB5004D4A45 /* ModalPresentationDelegate.swift in Sources */,
 				440D323B2C58EDB5002C9D42 /* ViewController.swift in Sources */,
+				44105E742C5A6EB5004D4A45 /* ModalPresentable+Default.swift in Sources */,
+				44105E782C5A6EB5004D4A45 /* ModalPresenter+UIViewController.swift in Sources */,
+				44105E552C59E355004D4A45 /* Font+Extension.swift in Sources */,
+				44105E572C59E5A7004D4A45 /* Colors.swift in Sources */,
+				44105E7E2C5A7244004D4A45 /* ViewController+Extension.swift in Sources */,
+				44105E712C5A6EB5004D4A45 /* ModalHeight.swift in Sources */,
 				440D32372C58EDB5002C9D42 /* AppDelegate.swift in Sources */,
+				44105E822C5A7341004D4A45 /* UIScrollView+Extension.swift in Sources */,
 				440D32392C58EDB5002C9D42 /* SceneDelegate.swift in Sources */,
+				44105E722C5A6EB5004D4A45 /* ModalPresent+UIViewController.swift in Sources */,
+				44105E6D2C5A6EB5004D4A45 /* ModalAnimator.swift in Sources */,
+				44105E772C5A6EB5004D4A45 /* ModalPresenter.swift in Sources */,
+				44105E732C5A6EB5004D4A45 /* ModalPresentable.swift in Sources */,
+				44105E752C5A6EB5004D4A45 /* ModalPresentable+LayoutHelpers.swift in Sources */,
+				44105E762C5A6EB5004D4A45 /* ModalPresentBackgroundInteraction.swift in Sources */,
+				44105E802C5A72E4004D4A45 /* ScrollViewBehavior.swift in Sources */,
 				44105E1F2C591EE4004D4A45 /* SearchResultController.swift in Sources */,
+				44105E6E2C5A6EB5004D4A45 /* ModalPresentationAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -961,6 +1109,14 @@
 				minimumVersion = 5.9.1;
 			};
 		};
+		44105E502C59E08C004D4A45 /* XCRemoteSwiftPackageReference "UIComponent" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lkzhao/UIComponent";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -988,6 +1144,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 44105D912C58F706004D4A45 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		44105E512C59E08C004D4A45 /* UIComponent */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44105E502C59E08C004D4A45 /* XCRemoteSwiftPackageReference "UIComponent" */;
+			productName = UIComponent;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
