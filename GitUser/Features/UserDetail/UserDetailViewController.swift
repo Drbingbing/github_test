@@ -83,7 +83,7 @@ final class UserDetailViewController: ViewController {
                     Image("location")
                         .size(width: 12, height: 12)
                         .tintColor(.steel)
-                    Text(user.location)
+                    Text(user.location ?? "none")
                         .font(.systemFont(ofSize: 12).rounded)
                         .textColor(.darkGray)
                 }

@@ -19,7 +19,7 @@ public struct DetailedGitUser: Decodable, Hashable, Sendable {
     public let name: String
     public let company: String?
     public let blog: String
-    public let location: String
+    public let location: String?
     public let email: String?
     public let hireable: Bool?
     public let bio: String?
