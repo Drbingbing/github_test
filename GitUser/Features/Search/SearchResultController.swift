@@ -8,6 +8,7 @@ import UIKit
 import BaseToolbox
 import GitModel
 import UIComponent
+import Kingfisher
 
 protocol SearchResultControllerDelegate: AnyObject {
     
@@ -78,8 +79,12 @@ private struct SearchResultRow: ComponentBuilder {
     
     func build() -> some Component {
         HStack(spacing: 8) {
-            Image("img_friends_female_default")
-                .size(width: 36, height: 36)
+            AsyncImage(user.avatarUrl) {
+                $0.placeholder(UIImage(named: "img_friends_female_default"))
+            }
+            .size(width: 36, height: 36)
+            .cornerRadius(18)
+                
             VStack(spacing: 4) {
                 HStack(spacing: 4) {
                     Text(user.login)

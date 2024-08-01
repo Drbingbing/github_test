@@ -55,11 +55,13 @@ final class UserDetailViewController: ViewController {
         
         componentView.component = VStack(spacing: 8) {
             HStack(spacing: 12, alignItems: .center) {
-                Image("img_friends_female_default")
-                    .size(width: 48, height: 48)
-                    .cornerRadius(24)
-                    .borderWidth(1)
-                    .borderColor(.steel)
+                AsyncImage(user.avatarUrl) {
+                    $0.placeholder(UIImage(named: "img_friends_female_default"))
+                }
+                .size(width: 48, height: 48)
+                .cornerRadius(24)
+                .borderWidth(1)
+                .borderColor(.steel)
                 VStack(spacing: 4) {
                     Text(user.name)
                         .font(.systemFont(ofSize: 18).bolded.rounded)

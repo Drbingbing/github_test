@@ -65,6 +65,8 @@
 		44105E892C5A7D05004D4A45 /* DetailedGitUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E882C5A7D05004D4A45 /* DetailedGitUser.swift */; };
 		44105E8C2C5A8D30004D4A45 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E8B2C5A8D30004D4A45 /* UserDetailViewController.swift */; };
 		44105E8E2C5A8EC2004D4A45 /* UserDetailStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E8D2C5A8EC2004D4A45 /* UserDetailStore.swift */; };
+		44AD17662C5B3DE200DCA517 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 44AD17652C5B3DE200DCA517 /* Kingfisher */; };
+		44AD17682C5B3DF200DCA517 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD17672C5B3DF200DCA517 /* AsyncImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,6 +188,7 @@
 		44105E882C5A7D05004D4A45 /* DetailedGitUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedGitUser.swift; sourceTree = "<group>"; };
 		44105E8B2C5A8D30004D4A45 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		44105E8D2C5A8EC2004D4A45 /* UserDetailStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailStore.swift; sourceTree = "<group>"; };
+		44AD17672C5B3DF200DCA517 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +200,7 @@
 				44105D932C58F706004D4A45 /* ComposableArchitecture in Frameworks */,
 				44105D962C58F74F004D4A45 /* BaseToolbox in Frameworks */,
 				44105E392C5931AC004D4A45 /* libGitLibrary.a in Frameworks */,
+				44AD17662C5B3DE200DCA517 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +298,7 @@
 				44105E7B2C5A6F0A004D4A45 /* WebViewController.swift */,
 				440D323A2C58EDB5002C9D42 /* ViewController.swift */,
 				44105E7F2C5A72E4004D4A45 /* ScrollViewBehavior.swift */,
+				44AD17672C5B3DF200DCA517 /* AsyncImage.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -520,6 +525,7 @@
 				44105D922C58F706004D4A45 /* ComposableArchitecture */,
 				44105D952C58F74F004D4A45 /* BaseToolbox */,
 				44105E512C59E08C004D4A45 /* UIComponent */,
+				44AD17652C5B3DE200DCA517 /* Kingfisher */,
 			);
 			productName = GitUser;
 			productReference = 440D32332C58EDB5002C9D42 /* GitUser.app */;
@@ -645,6 +651,7 @@
 				44105D942C58F74F004D4A45 /* XCRemoteSwiftPackageReference "BaseToolbox" */,
 				44105DE32C590A46004D4A45 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				44105E502C59E08C004D4A45 /* XCRemoteSwiftPackageReference "UIComponent" */,
+				44AD17642C5B3DE200DCA517 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 440D32342C58EDB5002C9D42 /* Products */;
 			projectDirPath = "";
@@ -677,6 +684,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44105E7A2C5A6EB5004D4A45 /* DimmedView.swift in Sources */,
+				44AD17682C5B3DF200DCA517 /* AsyncImage.swift in Sources */,
 				44105E7C2C5A6F0A004D4A45 /* WebViewController.swift in Sources */,
 				44105E8C2C5A8D30004D4A45 /* UserDetailViewController.swift in Sources */,
 				44105E792C5A6EB5004D4A45 /* ContainerView.swift in Sources */,
@@ -1153,6 +1161,14 @@
 				minimumVersion = 3.0.5;
 			};
 		};
+		44AD17642C5B3DE200DCA517 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1185,6 +1201,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 44105E502C59E08C004D4A45 /* XCRemoteSwiftPackageReference "UIComponent" */;
 			productName = UIComponent;
+		};
+		44AD17652C5B3DE200DCA517 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44AD17642C5B3DE200DCA517 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
