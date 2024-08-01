@@ -10,6 +10,7 @@ import Foundation
 public enum Api {
     public enum functions {
         public enum search {}
+        public enum user {}
     }
 }
 

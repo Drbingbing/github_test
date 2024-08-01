@@ -24,7 +24,7 @@ public final class Network {
         self.logging = logging
     }
     
-    public func request<T>(data: (FunctionDescription, String, DeserializeFunctionResponse<T>)) async throws -> T {
+    public func request<T>(_ data: (FunctionDescription, String, DeserializeFunctionResponse<T>)) async throws -> T {
         let request = GitUserRequest(path: data.1)
         request.setParameter(data.0.parameters)
         request.setMethod(data.0.method)

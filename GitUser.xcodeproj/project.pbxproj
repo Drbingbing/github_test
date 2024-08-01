@@ -60,6 +60,11 @@
 		44105E7E2C5A7244004D4A45 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E7D2C5A7244004D4A45 /* ViewController+Extension.swift */; };
 		44105E802C5A72E4004D4A45 /* ScrollViewBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E7F2C5A72E4004D4A45 /* ScrollViewBehavior.swift */; };
 		44105E822C5A7341004D4A45 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E812C5A7341004D4A45 /* UIScrollView+Extension.swift */; };
+		44105E852C5A7A79004D4A45 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E842C5A7A79004D4A45 /* User.swift */; };
+		44105E872C5A7C22004D4A45 /* Api_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E862C5A7C22004D4A45 /* Api_User.swift */; };
+		44105E892C5A7D05004D4A45 /* DetailedGitUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E882C5A7D05004D4A45 /* DetailedGitUser.swift */; };
+		44105E8C2C5A8D30004D4A45 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E8B2C5A8D30004D4A45 /* UserDetailViewController.swift */; };
+		44105E8E2C5A8EC2004D4A45 /* UserDetailStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44105E8D2C5A8EC2004D4A45 /* UserDetailStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +181,11 @@
 		44105E7D2C5A7244004D4A45 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		44105E7F2C5A72E4004D4A45 /* ScrollViewBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewBehavior.swift; sourceTree = "<group>"; };
 		44105E812C5A7341004D4A45 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
+		44105E842C5A7A79004D4A45 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		44105E862C5A7C22004D4A45 /* Api_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api_User.swift; sourceTree = "<group>"; };
+		44105E882C5A7D05004D4A45 /* DetailedGitUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedGitUser.swift; sourceTree = "<group>"; };
+		44105E8B2C5A8D30004D4A45 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		44105E8D2C5A8EC2004D4A45 /* UserDetailStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +308,7 @@
 		44105DC52C590333004D4A45 /* GitUserCore */ = {
 			isa = PBXGroup;
 			children = (
+				44105E832C5A7A72004D4A45 /* User */,
 				44105DE72C590B5C004D4A45 /* Logging.swift */,
 				44105E002C5914A9004D4A45 /* LogBox.swift */,
 				44105DD92C590603004D4A45 /* Account */,
@@ -332,6 +343,7 @@
 				44105DFA2C590C70004D4A45 /* ServerConfig.swift */,
 				44105E202C5924AE004D4A45 /* Api.swift */,
 				44105E222C5924E4004D4A45 /* Api_Search.swift */,
+				44105E862C5A7C22004D4A45 /* Api_User.swift */,
 			);
 			path = GitAPI;
 			sourceTree = "<group>";
@@ -357,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				44105E152C5916D2004D4A45 /* SearchStore.swift */,
+				44105E8D2C5A8EC2004D4A45 /* UserDetailStore.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -364,6 +377,7 @@
 		44105E182C59197A004D4A45 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				44105E8A2C5A8D1B004D4A45 /* UserDetail */,
 				44105E192C591980004D4A45 /* Search */,
 			);
 			path = Features;
@@ -382,6 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				44105E492C5936E4004D4A45 /* GitUser.swift */,
+				44105E882C5A7D05004D4A45 /* DetailedGitUser.swift */,
 			);
 			path = GitModel;
 			sourceTree = "<group>";
@@ -464,6 +479,22 @@
 				44105E6B2C5A6EB4004D4A45 /* View */,
 			);
 			path = ModalPresenter;
+			sourceTree = "<group>";
+		};
+		44105E832C5A7A72004D4A45 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				44105E842C5A7A79004D4A45 /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		44105E8A2C5A8D1B004D4A45 /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				44105E8B2C5A8D30004D4A45 /* UserDetailViewController.swift */,
+			);
+			path = UserDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -647,6 +678,7 @@
 			files = (
 				44105E7A2C5A6EB5004D4A45 /* DimmedView.swift in Sources */,
 				44105E7C2C5A6F0A004D4A45 /* WebViewController.swift in Sources */,
+				44105E8C2C5A8D30004D4A45 /* UserDetailViewController.swift in Sources */,
 				44105E792C5A6EB5004D4A45 /* ContainerView.swift in Sources */,
 				44105E1B2C5919B1004D4A45 /* SearchViewController.swift in Sources */,
 				44105E6F2C5A6EB5004D4A45 /* ModalPresentationController.swift in Sources */,
@@ -679,6 +711,7 @@
 			files = (
 				44105DC72C590333004D4A45 /* GitUserEngine.swift in Sources */,
 				44105E382C5929BA004D4A45 /* Logging.swift in Sources */,
+				44105E852C5A7A79004D4A45 /* User.swift in Sources */,
 				44105DCD2C59036D004D4A45 /* Search.swift in Sources */,
 				44105E372C5929BA004D4A45 /* LogBox.swift in Sources */,
 				44105DDB2C59060B004D4A45 /* Account.swift in Sources */,
@@ -694,6 +727,7 @@
 				44105DFB2C590C70004D4A45 /* ServerConfig.swift in Sources */,
 				44105E232C5924E4004D4A45 /* Api_Search.swift in Sources */,
 				44105E212C5924AE004D4A45 /* Api.swift in Sources */,
+				44105E872C5A7C22004D4A45 /* Api_User.swift in Sources */,
 				44105DF72C590BF2004D4A45 /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -704,6 +738,7 @@
 			files = (
 				44105E162C5916D2004D4A45 /* SearchStore.swift in Sources */,
 				44105E172C59186B004D4A45 /* Context.swift in Sources */,
+				44105E8E2C5A8EC2004D4A45 /* UserDetailStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +747,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44105E4A2C5936E4004D4A45 /* GitUser.swift in Sources */,
+				44105E892C5A7D05004D4A45 /* DetailedGitUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

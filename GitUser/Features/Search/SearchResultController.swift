@@ -12,6 +12,7 @@ import UIComponent
 protocol SearchResultControllerDelegate: AnyObject {
     
     func didUserLinkTapped(_ link: String)
+    func didUserRowTapped(user: GitUser)
     func didSearchResultScrollToBottom()
 }
 
@@ -43,8 +44,11 @@ final class SearchResultController: ViewController {
     func populate(users: [GitUser], animated: Bool) {
         componentView.component = VStack {
             for user in users {
-                SearchResultRow(user: user, performLinkAction: { [weak self] in self?.didUserLinkTapped($0) })
-                    .id(String(user.id))
+                SearchResultRow(
+                    user: user,
+                    performLinkAction: { [weak self] in self?.didUserLinkTapped($0) },
+                    performRowAction: { [weak self] in self?.didUserRowTapped(user: user) }
+                ).id(String(user.id))
                 Separator(color: .secondarySeparator)
                     .inset(left: 70, right: 30)
             }
@@ -54,16 +58,22 @@ final class SearchResultController: ViewController {
     func didUserLinkTapped(_ link: String) {
         delegate?.didUserLinkTapped(link)
     }
+    
+    func didUserRowTapped(user: GitUser) {
+        delegate?.didUserRowTapped(user: user)
+    }
 }
 
 private struct SearchResultRow: ComponentBuilder {
     
     var user: GitUser
     var onLinkAction: (String) -> Void
+    var onRowAction: () -> Void
     
-    init(user: GitUser, performLinkAction: @escaping (String) -> Void) {
+    init(user: GitUser, performLinkAction: @escaping (String) -> Void, performRowAction: @escaping () -> Void) {
         self.user = user
         self.onLinkAction = performLinkAction
+        self.onRowAction = performRowAction
     }
     
     func build() -> some Component {
@@ -104,5 +114,6 @@ private struct SearchResultRow: ComponentBuilder {
             }
         }
         .inset(h: 20, v: 8)
+        .tappableView(onRowAction)
     }
 }

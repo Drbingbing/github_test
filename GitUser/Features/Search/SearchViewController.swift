@@ -6,9 +6,9 @@
 //
 
 import UIKit
-import Combine
 import ComposableArchitecture
 import GitLibrary
+import GitModel
 
 final class SearchViewController: ViewController {
     
@@ -17,73 +17,56 @@ final class SearchViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupSearchBar()
-        setupSearchResultController()
-        bindingStore()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationItem.title = "Home"
-        navigationController?.setNavigationBarHidden(false, animated: animated)
-        navigationController?.navigationBar.prefersLargeTitles = true
-    }
-    
-    private func bindingStore() {
-        store.publisher.isSearching
-            .sink { isSearching in
-                
-            }
-            .store(in: &cancellables)
-        
-        store.publisher.users
-            .sink { [weak self] users in
-                self?.searchResultViewController?.populate(users: users, animated: true)
-            }
-            .store(in: &cancellables)
-    }
-    
-    private func setupSearchBar() {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
         navigationItem.searchController = searchController
-    }
-    
-    private func setupSearchResultController() {
-        let resultController = SearchResultController()
-        addChild(resultController)
         
-        view.addSubview(resultController.view)
-        resultController.view.translatesAutoresizingMaskIntoConstraints = false
-        resultController.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        resultController.view.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        resultController.view.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        resultController.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        resultController.delegate = self
+        let searchResultViewController = SearchResultController()
+        addChild(searchResultViewController)
+        
+        view.addSubview(searchResultViewController.view)
+        searchResultViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        searchResultViewController.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        searchResultViewController.view.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        searchResultViewController.view.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        searchResultViewController.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        searchResultViewController.delegate = self
         
         didMove(toParent: self)
         
-        searchResultViewController = resultController
+        var userDetailUserController: UserDetailViewController?
+        
+        observe { [weak self] in
+            guard let self else { return }
+            
+            self.navigationItem.title = "Home"
+            self.navigationController?.navigationBar.prefersLargeTitles = true
+            
+            searchResultViewController.populate(users: self.store.users, animated: true)
+            
+            if let store = store.scope(state: \.selectedUser, action: \.showUser.presented), userDetailUserController == nil {
+                userDetailUserController = UserDetailViewController(store: store)
+                self.navigationController?.pushViewController(userDetailUserController!, animated: true)
+            } else if store.selectedUser == nil, userDetailUserController != nil {
+                self.navigationController?.popViewController(animated: true)
+                userDetailUserController = nil
+            }
+        }
     }
     
-    // MARK: - Private Properties
-    private weak var searchResultViewController: SearchResultController?
-    
-    private var cancellables: [AnyCancellable] = []
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if !isMovingToParent && store.selectedUser != nil {
+            store.send(.showUser(.dismiss))
+        }
+    }
 }
 
 extension SearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        store.send(.searchQueryChanged(searchBar.text ?? ""), animation: .default)
-    }
-    
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        store.send(.searchDidEnd)
-    }
-    
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        store.send(.searchDidBegin)
+        store.send(.view(.searchQueryChanged(searchText)))
     }
 }
 
@@ -97,6 +80,10 @@ extension SearchViewController: SearchResultControllerDelegate {
     }
     
     func didSearchResultScrollToBottom() {
-        store.send(.didScrollViewScrollToBottom)
+        store.send(.view(.didScrollViewScrollToBottom))
+    }
+    
+    func didUserRowTapped(user: GitUser) {
+        store.send(.view(.didUserRowTapped(user)))
     }
 }

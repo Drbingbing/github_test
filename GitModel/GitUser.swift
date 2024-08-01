@@ -23,7 +23,7 @@ public struct GitUserResult: Decodable {
     }
 }
 
-public struct GitUser: Decodable, Hashable {
+public struct GitUser: Decodable, Hashable, Sendable {
     
     public let login: String
     public let id: Int

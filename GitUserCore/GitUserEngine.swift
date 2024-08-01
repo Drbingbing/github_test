@@ -20,6 +20,10 @@ public final class GitUserEngine {
     public lazy var seach: SearchUser = {
         return SearchUser(account: account)
     }()
+    
+    public lazy var user: User = {
+        return User(account: account)
+    }()
 }
 
 extension GitUserEngine {

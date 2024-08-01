@@ -25,6 +25,6 @@ extension GitUserEngine {
 }
 
 func _internal_searchUsers(account: Account, query: String, page: Int) async throws -> GitUserResult {
-    let result = try await account.network.request(data: Api.functions.search.searchUsers(query, page))
+    let result = try await account.network.request(Api.functions.search.searchUsers(query, page))
     return result
 }
